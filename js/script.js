@@ -39,6 +39,7 @@ function loadData() {
   $.ajax(wikipediaUrl, {
     dataType: 'application/json',
     callback: renderDataFromWikipedia,
+    headers: {'Origin': document.location.href},
     error: renderErrorMessageForWikipedia
   });
 
